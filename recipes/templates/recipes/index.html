@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'recipes/index.css' %}" >
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h2>Witamy na stronie z przepisami!</h2>
+    <p>Odkryj nasze ulubione potrawy i poznaj nowe inspiracje kulinarne.</p>
+  </div>
+{% endblock %}

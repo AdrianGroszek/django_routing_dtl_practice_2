@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'recipes/recipe_details.css' %}" >
+{% endblock %}
+
+{% block page_title %}
+  {{ recipe_details.nazwa }}
+{% endblock %}
+
+{% block content %}
+  <div class="recipe-details-container">
+    <h2>Składniki:</h2>
+    <ul>
+      {% for ingredient in recipe_details.skladniki %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Instrukcja:</h2>
+    <p>{{ recipe_details.instrukcja }}</p>
+  </div>
+{% endblock %}
